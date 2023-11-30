@@ -5,9 +5,10 @@ class CashRegister:
         self.reset()
 
     def reset(self):
+        self.last_transaction = 0
         self.total = 0
         self.items = []
-        self.last_transaction = 0
+       
 
     def add_item(self, title, price, quantity=1):
         self.items.extend([title] * quantity)
@@ -24,3 +25,4 @@ class CashRegister:
 
     def void_last_transaction(self):
         self.total -= self.last_transaction
+
